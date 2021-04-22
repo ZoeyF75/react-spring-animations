@@ -3,7 +3,9 @@ import Component1 from './components/Component1';
 
 function App() {
   return (
-    <Component1 />
+    <div className="App">
+      <Component1 />
+    </div>
   );
 }
 

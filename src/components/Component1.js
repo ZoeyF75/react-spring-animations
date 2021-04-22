@@ -1,25 +1,30 @@
-import { Spring } from 'react-spring';
+import { Spring } from "react-spring";
 
 export default function Component1() {
   return (
     <Spring
-      from={{ opacity: 0 }}
-      to={{ opacity: 1 }}
+      from={{ opacity: 0, marginTop: -500 }}
+      to={{ opacity: 1, marginTop: 0 }}
     >
       {props => (
         <div style={props}>
           <div style={c1Style}>
-          <h1>Component 1</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget. Facilisis volutpat est velit egestas dui id ornare arcu. Nunc sed velit dignissim sodales ut eu sem integer vitae. Morbi tristique senectus et netus et malesuada. Convallis a cras semper auctor. A diam sollicitudin tempor id eu nisl. Quam id leo in vitae turpis massa. Tellus cras adipiscing enim eu. Elementum facilisis leo vel fringilla.</p>
+            <h1>Component 1</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus
+              nobis adipisci eum minima deserunt at porro, veritatis officia
+              commodi itaque voluptates vel suscipit assumenda soluta ipsa
+              voluptatibus laudantium labore harum?
+            </p>
           </div>
         </div>
       )}
     </Spring>
-  )
+  );
 }
 
 const c1Style = {
-  background: 'steelblue',
-  color: 'white',
-  padding: '1.5rem'
-}
+  background: "steelblue",
+  color: "white",
+  padding: "1.5rem"
+};
