@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import { animated, useSpring } from 'react-spring';
 
 const C2 = ()=> {
-  const props = useSpring( { from: { opacity: 0 }, to: { opacity: 1 } })
+  const props = useSpring( { 
+    from: { opacity: 0 }, 
+    to: { opacity: 1 },
+    config: { delay: 1000, duration: 1000 } 
+  })
 
   return (
     <animated.div style={props}>
