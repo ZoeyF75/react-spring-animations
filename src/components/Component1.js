@@ -1,4 +1,4 @@
-import { animated, useSpring } from 'react-spring'
+import { animated, useSpring } from 'react-spring';
 
 export default function Component1() {
   const props = useSpring( { from: { opacity: 0, marginTop: -500}, to: { opacity: 1, marginTop: 0 } })
@@ -14,7 +14,7 @@ export default function Component1() {
       </p>
     </div>
    </animated.div>
-  );
+  ); 
 }
 
 const c1Style = {
