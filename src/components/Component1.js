@@ -28,7 +28,10 @@ export default function Component1() {
           commodi itaque voluptates vel suscipit assumenda soluta ipsa
           voluptatibus laudantium labore harum?
         </p>
-        <Number style={counter} />
+        <div style={counter}>
+          <Number />
+        </div>
+        
       </div>
     </animated.div>
   ); 
