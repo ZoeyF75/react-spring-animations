@@ -1,9 +1,21 @@
-import React, { Component } from 'react'
-import { Transition, animated } from 'react-spring';
+import React, { Component, useState } from 'react'
+import { Transition, animated, useSpring } from 'react-spring';
 import './App.css';
 import Component1 from './components/Component1';
 import Component2 from './components/Component2';
 import Component3 from './components/Component3';
+
+function Text() {
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    reset: true,
+    delay: 200,
+    config: { duration: 1000 },
+  })
+
+  return <animated.h1 style={props}>helo</animated.h1>
+}
 
 class App extends Component {
   state = {
@@ -17,22 +29,7 @@ class App extends Component {
       <div className="App">
         <Component1 />
         <Component2 toggle={this.toggle} />
-        <Transition
-          native
-          items={this.state.showComponent3}
-          from={{ opacity: 0 }}
-          enter={{ opacity: 1 }}
-          leave={{ opacity: 0 }}
-        >
-          {show =>
-            show &&
-            (props => (
-              <animated.div style={props}>
-                <Component3 />
-              </animated.div>
-            ))
-          }
-        </Transition>
+        <Text />
       </div>
     );
   }
