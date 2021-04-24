@@ -14,7 +14,9 @@ function Text() {
     config: { duration: 1000 },
   })
 
-  return <animated.h1 style={props}>helo</animated.h1>
+  return <animated.h1 style={props}>
+    <Component3 />
+  </animated.h1>
 }
 
 class App extends Component {
