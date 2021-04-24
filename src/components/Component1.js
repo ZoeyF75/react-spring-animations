@@ -1,19 +1,19 @@
 import { animated, useSpring } from 'react-spring';
 import { useState } from 'react';
 
-const Text = () => {
+const Number = () => {
   const [flip, set] = useState(false)
-  const props = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
+  const { number } = useSpring({
     reset: true,
     reverse: flip,
+    from: { number: 0 },
+    number: 10,
     delay: 200,
+    config: { duration: 10000 },
     onRest: () => set(!flip),
   })
-
-  return <animated.h1 style={props}>hello</animated.h1>
-}
+    return <animated.div>{number.to(n => n.toFixed(0))}</animated.div>
+  }
 
 export default function Component1() {
   const props = useSpring( { from: { opacity: 0, marginTop: -500}, to: { opacity: 1, marginTop: 0 } });
@@ -28,7 +28,7 @@ export default function Component1() {
           commodi itaque voluptates vel suscipit assumenda soluta ipsa
           voluptatibus laudantium labore harum?
         </p>
-        <Text style={counter} />
+        <Number style={counter} />
       </div>
     </animated.div>
   ); 
