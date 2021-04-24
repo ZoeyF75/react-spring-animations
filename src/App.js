@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react'
-import { Transition, animated, useSpring } from 'react-spring';
+import { animated, useSpring } from 'react-spring';
 import './App.css';
 import Component1 from './components/Component1';
 import Component2 from './components/Component2';
@@ -31,7 +31,7 @@ class App extends Component {
       <div className="App">
         <Component1 />
         <Component2 toggle={this.toggle} />
-        { this.state.showComponent3 ? <Component3Effect /> : console.log("no show")  }
+        { this.state.showComponent3 ? <Component3Effect /> : console.log("no show") }
       </div>
     );
   }
