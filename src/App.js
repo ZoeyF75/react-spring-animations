@@ -5,7 +5,7 @@ import Component1 from './components/Component1';
 import Component2 from './components/Component2';
 import Component3 from './components/Component3';
 
-function Text() {
+function Component3Effect() {
   const props = useSpring({
     to: { opacity: 1 },
     from: { opacity: 0 },
@@ -31,7 +31,7 @@ class App extends Component {
       <div className="App">
         <Component1 />
         <Component2 toggle={this.toggle} />
-        <Text />
+        { this.state.showComponent3 ? <Component3Effect /> : console.log("no show")  }
       </div>
     );
   }
